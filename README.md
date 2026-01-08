@@ -23,14 +23,14 @@ Aşağıda kutucuk (checkbox) ile gösterilen maddelerden en az birini seçtiği
 
 ### Buffer Pool
 
-- [ ]  Veritabanları, Sık kullanılan sayfaları bellekte (RAM) kopyalar mı (caching) ?
+- [X]  Veritabanları, Sık kullanılan sayfaları bellekte (RAM) kopyalar mı (caching) ?
 
-- [ ]  LRU / CLOCK gibi algoritmaları
-- [ ]  Diske yapılan I/O nasıl minimize ederler?
+- [X]  LRU / CLOCK gibi algoritmaları
+- [X]  Diske yapılan I/O nasıl minimize ederler?
 
 # 2. Veri Yapıları Perspektifi
 
-- [ ]  B+ Tree Veri Yapıları VT' lerde nasıl kullanılır?
+- [X]  B+ Tree Veri Yapıları VT' lerde nasıl kullanılır?
 - [ ]  VT' lerde hangi veri yapıları hangi amaçlarla kullanılır?
 - [ ]  Clustered vs Non-Clustered Index Kavramı
 - [ ]  InnoDB satırı diskte nasıl durur?
@@ -63,22 +63,24 @@ Ekran kaydı. 2-3 dk. açık kaynak V.T. kodu üzerinde konunun gösterimi. Vide
 
 # Açıklama (Ort. 600 kelime)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia luctus urna, vel aliquet lacus facilisis ac. Donec quis placerat orci, efficitur consectetur lacus. Sed rhoncus erat ex, at sagittis velit mollis et. Aliquam enim orci, sollicitudin sit amet libero quis, mollis ultricies risus. Fusce tempor, felis a consequat tristique, dolor magna convallis nulla, vel ullamcorper magna mauris non ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam quis imperdiet ex, at blandit sapien. Aliquam lacinia erat ac ipsum fringilla, quis vestibulum augue posuere. Nulla in enim nulla. Nunc euismod odio mauris, sed sollicitudin ex condimentum non. In efficitur egestas enim. Fusce tempus erat quis placerat convallis.
-
-Nam sit amet tincidunt ante. Pellentesque sit amet quam interdum, pellentesque dui vel, iaculis elit. Donec sed dui sodales nulla dignissim tincidunt. Maecenas semper metus id fermentum vulputate. Pellentesque lobortis hendrerit venenatis. Nullam imperdiet, ex eget ultricies egestas, mauris nunc aliquam ante, sed consectetur tellus ex vel leo. Nunc ut erat dapibus, auctor dolor eu, pretium sem. In lacinia congue eros et finibus. Aenean auctor, leo a feugiat placerat, urna felis lacinia purus, laoreet volutpat mi nisl eget dui. Ut vitae condimentum leo.
-
-Maecenas ex diam, vehicula et nulla vel, mattis viverra metus. Nam at ex scelerisque, semper augue lobortis, semper est. Etiam id pretium odio, eget rutrum neque. Pellentesque blandit magna vel aliquam gravida. Nullam massa nisl, imperdiet at dapibus non, cursus vehicula turpis. Vestibulum rutrum hendrerit augue. Aliquam id nisi id arcu tempor venenatis vel nec erat. Morbi sed posuere erat. Morbi et sollicitudin urna. Suspendisse ullamcorper vitae purus sit amet sodales. Nam ut tincidunt ipsum, ut varius erat. Duis congue magna nec euismod condimentum. In hac habitasse platea dictumst. Nunc mattis odio sed enim laoreet imperdiet. In hac habitasse platea dictumst. Nullam tincidunt quis.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia luctus urna, vel aliquet lacus facilisis ac. Donec quis placerat orci, efficitur consectetur lacus. Sed rhoncus erat ex, at sagittis velit mollis et. Aliquam enim orci, sollicitudin sit amet libero quis, mollis ultricies risus. Fusce tempor, felis a consequat tristique, dolor magna convallis nulla, vel ullamcorper magna mauris non ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam quis imperdiet ex, at blandit sapien. Aliquam lacinia erat ac ipsum fringilla, quis vestibulum augue posuere. Nulla in enim nulla. Nunc euismod odio mauris, sed sollicitudin ex condimentum non. In efficitur egestas enim. Fusce tempus erat quis placerat convallis.
-
-Nam sit amet tincidunt ante. Pellentesque sit amet quam interdum, pellentesque dui vel, iaculis elit. Donec sed dui sodales nulla dignissim tincidunt. Maecenas semper metus id fermentum vulputate. Pellentesque lobortis hendrerit venenatis. Nullam imperdiet, ex eget ultricies egestas, mauris nunc aliquam ante, sed consectetur tellus ex vel leo. Nunc ut erat dapibus, auctor dolor eu, pretium sem. In lacinia congue eros et finibus. Aenean auctor, leo a feugiat placerat, urna felis lacinia purus, laoreet volutpat mi nisl eget dui. Ut vitae condimentum leo.
-
-Maecenas ex diam, vehicula et nulla vel, mattis viverra metus. Nam at ex scelerisque, semper augue lobortis, semper est. Etiam id pretium odio, eget rutrum neque. Pellentesque blandit magna vel aliquam gravida. Nullam massa nisl, imperdiet at dapibus non, cursus vehicula turpis. Vestibulum rutrum hendrerit augue. Aliquam id nisi id arcu tempor venenatis vel nec erat. Morbi sed posuere erat. Morbi et sollicitudin urna. Suspendisse ullamcorper vitae purus sit amet sodales. Nam ut tincidunt ipsum, ut varius erat. Duis congue magna nec euismod condimentum. In hac habitasse platea dictumst. Nunc mattis odio sed enim laoreet imperdiet. In hac habitasse platea dictumst. Nullam tincidunt quis.
+   Veritabanı Performansında Buffer Pool ve B+ Tree Mekanizmaları: SQLite Kaynak Kod İncelemesi
+Modern veritabanı sistemlerinin performansı, altta yatan sistem programlama ve veri yapıları implementasyonlarına bağlıdır. Bu çalışmada, açık kaynak kodlu SQLite veritabanı yönetim sisteminin kaynak kodları üzerinden iki kritik performans bileşenini inceledim: Buffer Pool (bellek önbellekleme) mekanizması ve B+ Tree veri yapısı. Bu mekanizmaların veritabanı performansına doğrudan etkisini SQLite'ın C dilinde yazılmış kaynak kodları üzerinde somut örneklerle gösterdim.
+  Buffer Pool: Disk I/O Optimizasyonu
+Veritabanı sistemlerinde en büyük performans darboğazlarından biri disk erişim hızıdır.  Bu sorunu çözmek için SQLite, Buffer Pool adı verilen bir önbellekleme mekanizması kullanır.
+SQLite'ın getPageNormal fonksiyonunda bu mekanizmayı inceledim. Fonksiyon, bir veritabanı sayfasını okumadan önce sqlite3PcacheFetch fonksiyonuyla Page Cache'e (pPCache) bakar. Eğer istenen sayfa cache'de mevcutsa - bu duruma "cache hit" denir - disk erişimi yapılmadan doğrudan RAM'den veri döndürülür. Bu durumda PAGER_STAT_HIT sayacı artırılır ve fonksiyon hızlıca sonlanır. Disk I/O tamamen atlanmış olur, bu da milisaniyeler kazandırır.
+Cache'de sayfa bulunamadığında ise "cache miss" durumu oluşur. Bu durumda sqlite3PcacheFetchStress fonksiyonu devreye girer. Bu fonksiyon, LRU (Least Recently Used - En Az Yakın Zamanda Kullanılan) algoritmasını uygular. Cache dolu olduğunda, en az kullanılan sayfayı bellekten çıkararak yeni sayfa için yer açar. Ardından readDbPage fonksiyonuyla sayfa diskten okunur ve cache'e eklenir. PAGER_STAT_MISS sayacı artırılır. Önemli olan nokta şudur: Diskten okunan her sayfa otomatik olarak cache'e konur, böylece aynı sayfaya yapılacak sonraki erişimler cache hit olarak gerçekleşir.
+Buffer Pool mekanizması sayesinde SQLite, sık erişilen sayfaları RAM'de tutarak disk I/O işlemlerini drastik şekilde azaltır. 
+  B+ Tree: Hızlı Veri Erişimi
+SQLite'da her tablo ve index, B+ Tree veri yapısı kullanılarak organize edilir. B+ Tree, dengeli bir ağaç yapısıdır ve verilere logaritmik zamanda erişim sağlar.
+moveToRoot fonksiyonu, B+ Tree üzerinde arama işleminin başlangıç noktasıdır. Her tablonun ve index'in kendine ait bir kök sayfası vardır ve pgnoRoot değişkeni bu kök sayfanın disk üzerindeki numarasını tutar. getAndInitPage fonksiyonuyla bu kök sayfa belleğe yüklenir. Kök sayfa numarası tablo oluşturulduğunda belirlenir ve sabit kalır.
+Arama işlemi sırasında moveToChild fonksiyonu kullanılarak ağaçta aşağı doğru ilerlenir. Bu fonksiyonda iPage değişkeni ağacın kaçıncı seviyesinde olunduğunu gösterir ve her child'a geçişte bir artar. newPgno parametresi, hangi alt düğüme gidileceğini belirtir. Bu sayfa numarası, arama algoritmasının anahtar karşılaştırması sonucunda belirlenir.
+B+ Tree'nin gücü, arama karmaşıklığının O(log n) olmasıdır
+SQLite kaynak kodlarında incelediğim Buffer Pool ve B+ Tree mekanizmaları, veritabanı performansının temelini oluşturur. Buffer Pool, disk erişimini minimize ederek latency'yi azaltırken, B+ Tree logaritmik arama karmaşıklığı sağlayarak büyük veri setlerinde bile hızlı erişim garantiler. Bu iki mekanizma birlikte çalışarak modern veritabanı sistemlerinin yüksek performansını mümkün kılar.
 
 ## VT Üzerinde Gösterilen Kaynak Kodları
 
-Açıklama [Linki](https://...) \
-Açıklama [Linki](https://...) \
-Açıklama [Linki](https://...) \
+Buffer Pool - getPageNormal fonksiyonu [Github](https://github.com/sqlite/sqlite/blob/master/src/pager.c#L5535) \
+B+ Tree Root - moveToRoot fonksiyonu [Github](https://github.com/sqlite/sqlite/blob/master/src/btree.c#L5542) \
+B+ Tree Child - moveToChild fonksiyonu [Github](https://github.com/sqlite/sqlite/blob/master/src/btree.c#L4567) \
 ... \
 ...
