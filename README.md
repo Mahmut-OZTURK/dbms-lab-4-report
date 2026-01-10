@@ -56,7 +56,7 @@ DB diske yazarken:
 
 ---
 
-# Video [Linki](https://www.youtube.com/watch?v=Nw1OvCtKPII&t=2635s) 
+# Video [Linki](https://youtu.be/Vf743p3gHPI) 
 Ekran kaydı. 2-3 dk. açık kaynak V.T. kodu üzerinde konunun gösterimi. Video kendini tanıtma ile başlamalıdır (Numara, İsim, Soyisim, Teknik İlgi Alanları). 
 
 ---
@@ -85,6 +85,6 @@ SQLite kaynak kodlarında incelediğim Buffer Pool ve B+ Tree mekanizmaları, ve
 
 Buffer Pool - getPageNormal fonksiyonu [Github](https://github.com/sqlite/sqlite/blob/master/src/pager.c#L5535) \
 B+ Tree Root - moveToRoot fonksiyonu [Github](https://github.com/sqlite/sqlite/blob/master/src/btree.c#L5542) \
-B+ Tree Child - moveToChild fonksiyonu [Github](https://github.com/sqlite/sqlite/blob/master/src/btree.c#L4567) \
+B+ Tree Child - moveToChild fonksiyonu [Github](https://github.com/sqlite/sqlite/blob/master/src/btree.c#L5442) \
 ... \
 ...
